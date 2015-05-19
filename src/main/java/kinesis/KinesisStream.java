@@ -112,10 +112,12 @@ public class KinesisStream {
 	}
 	
 	
+
 	/**
-	 * Add the data in the list to the kinesis stream via the putRecords method.
-	 * 
-	 * @param dataList
+	 * Pushes the data in the list to the kinesis stream. Note that serialization 
+	 * should be standardised better than it currently is. 
+	 * @param dataList  - data to be pushed to stream
+	 * @return List of failed push entries.
 	 * @throws RuntimeException
 	 * @throws ProvisionedThroughputException
 	 * @throws InvalidArgumentException
